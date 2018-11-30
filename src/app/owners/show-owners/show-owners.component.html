@@ -1,0 +1,21 @@
+<div *ngIf="owners">
+  <ul class="list-unstyled">
+    <li *ngFor="let owner of owners">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{owner.firstName}} {{owner.lastName}}</h5>
+              <p class="card-text">Contact at {{owner.email}}</p>
+              <a routerLink="/ownerdetail/{{owner.id}}" class="btn btn-info">See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!owners">
+  ...Loading
+</div>
+<button routerLink="/addowner">Add new owner</button>

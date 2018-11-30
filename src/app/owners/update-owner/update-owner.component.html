@@ -1,0 +1,22 @@
+<form [formGroup]="updateOwnerForm" (ngSubmit)="save()">
+<label>
+  First name:
+  <input type="text" formControlName="firstName">
+</label>
+<br>
+<label>
+  Last name:
+  <input type="text" formControlName="lastName">
+</label>
+<br>
+<label>
+  Email:
+  <input type="text" formControlName="email">
+</label>
+<br>
+<label>
+  Date of Birth:
+  <input type="date" formControlName="birthdate">
+</label>
+<button type="submit">Save</button>
+</form>

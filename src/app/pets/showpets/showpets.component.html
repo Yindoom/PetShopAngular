@@ -1,0 +1,19 @@
+  <div class="row" *ngIf="pets">
+    <div class="col-3 pl-1 pr-1 mt-1" *ngFor="let pet of pets">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{pet.name}}</h5>
+          <h3>{{pet.colour}} {{pet.type}}</h3>
+          <p class="card-text">Price: {{pet.price}}Dkk</p>
+        </div>
+        <div class="card-body text-right">
+          <a routerLink="/petdetails/{{pet.id}}" class="btn btn-info">See details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<button style="align-self: stretch" class="btn btn-primary" routerLink="/petadd">Add a new Pet</button>
+<div *ngIf="!pets">
+  Loading...
+    </div>
+

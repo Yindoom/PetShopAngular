@@ -1,0 +1,14 @@
+<button class="btn btn-secondary" routerLink="/pets">Back</button>
+<div *ngIf="pet">
+  <h1> {{pet.name}}</h1>
+  <h2> {{pet.colour}} {{pet.type}}</h2>
+  <h3> Date of Birth: {{pet.birthdate | date: "dd/MM/yyyy"}}</h3>
+  <h3>Date of Sale: {{pet.sellDate | date: "dd/MM/yyyy"}}</h3>
+  <h3>Price: {{pet.price}}</h3> <br>
+  Contact previous owner at: {{pet.previousOwner.email}} <br>
+  <button class="btn btn-info" routerLink="/petupdate/{{pet.id}}">Update</button>
+  <button class="btn btn-danger" (click)="delete(pet.id)">Delete</button>
+</div>
+<div *ngIf="!pet">
+  Loading...
+</div>

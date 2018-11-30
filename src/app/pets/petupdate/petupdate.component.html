@@ -1,0 +1,38 @@
+<button class="btn btn-secondary" routerLink="/pets">Back</button>
+
+<h3>Update a pet</h3>
+
+<form [formGroup]="updatePetForm" (ngSubmit)="save()">
+
+  <label>
+    Name of Pet:
+    <input type="text" formControlName="name">
+  </label>
+  <br>
+  <label>
+    Type of Pet:
+    <input type="text" formControlName="type">
+  </label>
+  <br>
+  <label>
+    Colour of Pet:
+    <input type="text" formControlName="colour">
+  </label>
+  <br>
+  <label>
+    Date of Birth:
+    <input type="date" formControlName="birthdate">
+  </label>
+  <br>
+  <label>
+    Date of sale:
+    <input type="date" formControlName="sellDate">
+  </label>
+  <br>
+  <label>
+    Previous Owner:
+    <input type="text" formControlName="previousOwner">
+  </label>
+
+  <button class="btn btn-primary" type="submit">Save</button>
+</form>

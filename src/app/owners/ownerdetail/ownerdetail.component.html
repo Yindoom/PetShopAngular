@@ -1,0 +1,11 @@
+<button routerLink="/owners">Back</button>
+<div *ngIf="owner">
+  <h1>{{owner.firstName}} {{owner.lastName}}</h1>
+  <h2>{{owner.email}}</h2>
+  <h3> Date of Birth: {{owner.birthdate | date: "dd/MM/yyyy"}}</h3>
+  <button class="btn btn-info" routerLink="/ownerupdate/{{owner.id}}">Update</button>
+  <button class="btn btn-danger" (click)="delete(owner.id)">Delete</button>
+</div>
+<div *ngIf="!owner">
+  Loading...
+</div>
